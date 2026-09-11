@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    Chicken Plucker shipped one CPMods_Bases.xml across all of his mods, holding nine abstract
+    bases - apparel, meals, weapons, workbenches - of which Retro Joy uses exactly two. The
+    other seven are dropped here, and the two survivors are renamed.
+
+    The renaming is for legibility only, and it is worth saying why it is NOT a fix. Eight
+    subscribed mods ship that same file with the same nine names, which looks like a clash and
+    is not one: XmlInheritance keeps nodesByName as a Dictionary<string, List<node>>, each node
+    carrying the ModContentPack it came from, and GetBestParentFor picks among the homonyms the
+    one belonging to the nearest mod in load order. Every mod therefore resolves to its own
+    copy. Homonyms across mods are a supported arrangement, not an error.
+
+    So the reason these two are renamed is that a file called RetroJoy_Bases.xml holding two
+    bases named after somebody else's mods reads badly. Names of abstract defs never reach a
+    save, so it costs nothing.
+
+    Dropping the seven also removes the mod's only two dead fields: CPBenchBase carried
+    <workSpeedPenaltyOutdoors> and <workSpeedPenaltyTemperature>, which BuildingProperties no
+    longer has in 1.6. Nothing in Retro Joy inherited from it.
+  -->
+
+  <ThingDef Name="RetroJoy_BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <statBases>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef Name="RetroJoy_FurnitureBase" ParentName="RetroJoy_BuildingBase" Abstract="True">
+    <designationCategory>Furniture</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <tradeTags>
+      <li>Furniture</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

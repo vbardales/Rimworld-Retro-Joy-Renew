@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- EN: retro armchair -->
+  <RetroArmchair.label>fauteuil rétro</RetroArmchair.label>
+  <!-- EN: A highly comfortable armchair that was banned from making jokes, however it sure feels cozy to sit on. -->
+  <RetroArmchair.description>Un fauteuil extrêmement confortable à qui l'on a interdit de faire des blagues. Il n'en reste pas moins très douillet.</RetroArmchair.description>
+
+  <!-- EN: retro table (small) -->
+  <RetroSmallTable.label>table rétro (petite)</RetroSmallTable.label>
+  <!--
+    The def has no description of its own: it inherits vanilla's TableBase one. Inheritance runs
+    before translation injection, and DefInjected is keyed on the concrete defName, so without
+    this line a French game shows the English sentence. The wording is the one Core's French
+    already uses for Table1x2c and Table2x2c.
+  -->
+  <!-- EN: People eat off tables when chairs are placed facing them. -->
+  <RetroSmallTable.description>Les gens s'en servent pour manger lorsque des chaises sont placées face à la table.</RetroSmallTable.description>
+
+  <!-- EN: Rimtendo console -->
+  <RimtendoESConsole.label>console Rimtendo</RimtendoESConsole.label>
+  <!-- EN: Plays a selection of classic games on the totally non-copyright console "Rimtendo Entertainment System". Retro TV included. -->
+  <RimtendoESConsole.description>Permet de jouer à une sélection de grands classiques sur la console totalement libre de droits « Rimtendo Entertainment System ». Télévision rétro comprise.</RimtendoESConsole.description>
+
+  <!--
+    The label is left in English on purpose: it is the name of a toy, and the joke only works
+    under that name.
+  -->
+  <!-- EN: The ancient game of two robots beating each other to death against their will for your entertainment.\n\nNo wonder Mechanoids hate us. -->
+  <RockemSockemTable.description>L'antique jeu où deux robots se rouent de coups jusqu'à la mort, contre leur gré, pour votre bon plaisir.\n\nPas étonnant que les mécanoïdes nous détestent.</RockemSockemTable.description>
+
+  <!--
+    "Randies" is a pun on Dragons and on Randy Random, whom the French game calls Randy Hasard.
+    "Donjons et Randys" keeps both halves.
+  -->
+  <!-- EN: Dungeons and Randies -->
+  <DNRandiesTable.label>Donjons et Randys</DNRandiesTable.label>
+  <!-- EN: The ancient tabletop role-playing game. Toxic fallouts and plagues for everybody! -->
+  <DNRandiesTable.description>L'antique jeu de rôle sur table. Pluies toxiques et pestes pour tout le monde !</DNRandiesTable.description>
+
+</LanguageData>

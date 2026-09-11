@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    The mod's own recreation type, alongside Core's Gaming_Dexterity and Gaming_Cerebral. It is
+    what makes the console worth building next to a chess table: joy tolerance is tracked per
+    kind, so a colony that only plays cerebral games gets diminishing returns from them, and
+    video gaming is a fresh column.
+
+    A kind with nothing to satisfy it costs the colony nothing. Tolerance is only ever raised by
+    JoyToleranceSet.Notify_JoyGained, which is reached by actually doing the activity, and the
+    boredom alert asks whether a pawn is bored of the kinds *available* on the map. The one
+    visible effect of an unsatisfied kind is a line of text: JoyUtility.JoyKindsNotOnMapString
+    lists it among the recreation types the map does not offer, exactly as vanilla lists
+    telescope study on a colony with no telescope.
+  -->
+
+  <JoyKindDef>
+    <defName>Gaming_Video</defName>
+    <label>video gaming</label>
+  </JoyKindDef>
+
+</Defs>
