@@ -2,17 +2,6 @@
 
 All notable changes to this mod are documented here.
 
-## [Unreleased]
-
-### Added
-
-- Original 128×128 ModIcon generated with Codex (OpenAI), with its full-resolution source retained
-  under `Art/ModIcon-source.png`.
-
-### Changed
-
-- Marked the public abandoned-source port as **unofficial** and added the required removal notice.
-
 ## [1.0.0] — 2026-09-05
 
 First release. Port of Chicken Plucker's **[CP] Retro Joy** to RimWorld 1.6.

@@ -193,4 +193,4 @@ named `min` and `max`, and Core writes ranges that way itself in three places, a
 See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence position and what exactly was carried over.
 
 The 1.6 port was made with help from Claude (Anthropic), under human direction and in-game
-testing. Codex (OpenAI) generated the original ModIcon for this port.
+testing.
