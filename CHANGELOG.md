@@ -2,6 +2,15 @@
 
 All notable changes to this mod are documented here.
 
+## [Unreleased]
+
+### Changed
+
+- Replaced the inherited Workshop preview with an original Retro Joy preview generated with Codex
+  (OpenAI); its full-resolution source is retained at `Art/Preview.png`.
+- Installed the maintainer-generated ModIcon at 128 px, preserving its full-resolution source under
+  `Art/ModIcon-source.png`.
+
 ## [1.0.0] — 2026-09-05
 
 First release. Port of Chicken Plucker's **[CP] Retro Joy** to RimWorld 1.6.
