@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>nelim.retrojoy</packageId>
+  <name>Retro Joy Renew (unofficial)</name>
+  <author>Chicken Plucker - 1.6 adapted by Nelim</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/vbardales/Rimworld-Retro-Joy-Renew</url>
+  <incompatibleWith>
+    <li>CP.Retro.Joy</li>
+  </incompatibleWith>
+  <description>UNOFFICIAL. This mod is published without the original author's explicit consent.
+If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+Three recreation buildings and two pieces of matching furniture, from the era of cartridges and cardboard.
+
+- Rimtendo console - a games console and its CRT, built in the Recreation tab once tube television is researched. It is watched like a television, so a bedridden colonist can play from bed.
+- Rock'em Sock'em - two robots punching each other. Dexterity play, and it trains melee.
+- Dungeons and Randies - a tabletop role-playing game for up to eight colonists around a 2x2 table. Cerebral play, and it trains intellectual.
+- Retro armchair and retro table (small), in the Furniture tab.
+
+The console has its own recreation type, VIDEO GAMING, next to Core's dexterity play and cerebral play. That is the point of it: recreation tolerance is tracked per type, so a colony that only has a chess table gets less and less out of it, and a console is a fresh column rather than more of the same.
+
+Available in English and French.
+
+I am not the author of this mod. The buildings, the artwork and the balance are Chicken Plucker's - all I did was bring them forward to 1.6, fix what the port turned up, and write the French. Credit goes to them; mistakes in the port are mine.
+
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1842663639 - declares 1.5 and nothing further. dninemfive brought that one from B19 to 1.0.
+
+WHAT CHANGED
+
+Nothing in RimWorld 1.6 broke this mod: every field it uses still exists, and the five classes it names - JoyGiver_WatchBuilding, JoyGiver_InteractBuildingSitAdjacent, JobDriver_SitFacingBuilding, JobDriver_PlayPoker, JobDriver_WatchTelevision - are all still there. What the port fixed are faults that predate it.
+
+The console could be watched through a wall. All five watch-buildings in the base game set watchBuildingInSameRoom, and this one did not; the field defaults to false, so its watch area ran into the next room and colonists would sit there to play. It now behaves like a television.
+
+The three recreation jobs did not allow an opportunistic prefix, which every recreation job in the base game does. A colonist walking to the table can now pick up something lying in their path and haul it on the way.
+
+A downed colonist will no longer crawl to the console. The job can be done from bed, and the base game's television job disables crawling for exactly that reason.
+
+The console also gained the screen glow the three vanilla televisions have.
+
+Under the hood: the mod carried nine shared abstract defs from Chicken Plucker's other mods, of which it used two. Seven are gone, along with the only two dead fields in the mod, which sat on one of them. The two that remain are renamed, for readability rather than for any clash - RimWorld resolves an abstract name to the nearest mod in load order, so the eight subscribed mods that ship that same file under the same names have never been in each other's way. The textures did move for a real reason: names like Things/Furniture/SmallTable are one collision away from any other furniture mod, and the texture database is shared, so they now live in a folder of their own. None of it is visible in game or in a save.
+
+The buildings themselves - their stats, their costs, their recreation rates, their skills, their artwork - are untouched.
+
+CREDIT AND REMOVAL
+
+Chicken Plucker declared no licence: no file in the mod, nothing in its About.xml, no linked repository, and nothing in the description of its Steam page. It is republished here under the usual convention for abandoned mods - full credit, a link to the original, and removal on request. If Chicken Plucker or dninemfive would rather this port did not exist, say so and it comes down: no argument, no delay.
+
+The original defNames are kept, so a save moves between the two mods without losing anything. The two cannot run together: the original is declared incompatible above. Run one or the other.
+
+Content mod: removing it mid-save destroys any of these buildings already built.
+
+IF I GO QUIET
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+AI-GENERATED
+Claude (Anthropic) assisted the 1.6 port under human direction. Codex (OpenAI) generated the original ModIcon for this port.
+
+THANKS
+Chicken Plucker for the mod, artwork and balance; dninemfive for keeping it alive through the B19-to-1.0 update.
+
+See ATTRIBUTION.md and LICENSE for the source-material rights position and the scope of the MIT licence.
+
+[url=https://github.com/vbardales/Rimworld-Retro-Joy-Renew]Source code on GitHub[/url]</description>
+</ModMetaData>

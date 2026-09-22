@@ -1,0 +1,48 @@
+MIT License
+
+Copyright (c) 2026 Nelim
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+---------------------------------------------------------------------------
+SCOPE OF THE ABOVE
+
+The MIT licence above covers only what the 1.6 port added:
+
+  - the four corrections to the defs, and the restructuring of the abstract
+    bases and the texture paths
+  - the French translation
+  - the packaging and the documentation
+
+IT DOES NOT COVER THE ORIGINAL MOD. The five buildings, their stats, their
+recreation jobs, their ten textures and the Workshop preview are Chicken
+Plucker's work, reused here:
+
+  https://steamcommunity.com/sharedfiles/filedetails/?id=1842663639
+
+Chicken Plucker never declared a licence for them, so none is granted here and
+none can be. They are redistributed under the usual practice for abandoned
+mods - explicit credit, a link to the original, and removal on request. The
+B19-to-1.0 update the mod is descended from is dninemfive's.
+
+If Chicken Plucker or dninemfive asks for this to be taken down, it comes down.
+Immediately, and without discussion.
+
+ATTRIBUTION.md records what was taken and what was changed.

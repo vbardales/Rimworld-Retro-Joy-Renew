@@ -1,0 +1,166 @@
+# Retro Joy — attribution
+
+A 1.6 port of **[CP] Retro Joy**, by **Chicken Plucker**
+([1842663639](https://steamcommunity.com/sharedfiles/filedetails/?id=1842663639)), whose B19-to-1.0
+update was done by **dninemfive**.
+
+## Status: public
+
+The source mod is **dead** — it declares 1.5 and nothing further, and the last year of its
+Workshop comments is people asking for 1.6 — and **no licence is declared anywhere**, checked at
+five places: no `LICENSE` file in the mod, no mention in its `About.xml`, no linked repository
+(there is no `<url>` element at all), nothing in the body of the description on its Steam page, and
+nothing on the author's Steam profile. The mod's B18 ancestor, still subscribed as
+[1131675461](https://steamcommunity.com/sharedfiles/filedetails/?id=1131675461), was checked too
+and says nothing either.
+
+That check is the one that matters here. It is the check that stopped the port of たたら製鉄, whose
+licence clause was sitting in the body of its `About.xml` description rather than in a file.
+
+What the Steam page does carry is a credits block, and it is worth quoting in full because it is
+the only statement the author makes about ownership of anything in the mod: *dninemfive for
+updating this mod to 1.0; Barky for reviewing the mod during B18; TSR and Wizards of the Coast for
+D&D; Nintendo for suing everybody; MATTEL — Rock Em' Sock Em'.* The last three are jokes about the
+parodies the buildings are, not licences, and they are the reason for the note at the end of this
+file.
+
+**The mod is abandoned; the author is not.** Chicken Plucker still uses Steam daily and still has
+live RimWorld collections. The convention below applies to the mod, not to him — a courtesy
+message before publishing costs nothing and is the right thing to send.
+
+This is the usual convention for ports on the RimWorld Workshop: republished with **credit by
+name** and **removal on request, without argument**. The `<author>` field reads
+`Chicken Plucker - 1.6 adapted by Nelim`, and the removal clause is in the description.
+
+## What was carried over
+
+Everything the mod contained that it actually used: 14 of its 21 defs, all ten of its textures, and
+its Workshop preview. The seven left behind are abstract bases it never inherited from — see below.
+
+- The five `ThingDef`s, with their original `defName`s: `RimtendoESConsole`, `RockemSockemTable`,
+  `DNRandiesTable`, `RetroArmchair`, `RetroSmallTable`. Their stats, costs, stuff categories,
+  research prerequisite, damage rects, shadow volumes and draw sizes are as they were.
+- The three `JoyGiverDef`s and three `JobDef`s, with their recreation durations, gain rates,
+  participant counts, skills and XP rates.
+- The `JoyKindDef` `Gaming_Video`.
+- The ten textures, byte for byte, under new names (see below).
+- `About/Preview.png`, Chicken Plucker's own mock game-box showcase, unchanged.
+
+`About/ModIcon.png` was his too — the Rock'em Sock'em texture at 64 px — and it is **not** carried
+over. It was dropped on 2026-09-11 under a rule that applies to the whole repository: a mod icon
+inherited from the source mod is the source author's work standing in for identification of this
+port, which is the one place a port should speak for itself. A replacement in the repository's own
+style is pending; until it exists this mod ships without an icon, which RimWorld allows.
+
+Nine abstract `ThingDef`s came with the mod in `CPMods_Bases.xml`, a file Chicken Plucker shipped
+across all of his mods. Two of them are used here and were kept; the other seven — apparel, meals,
+weapons, workbenches — are gone. See below.
+
+## What changed in the port
+
+**Nothing in 1.6 had broken it.** Every element the mod writes still maps to a field on the 1.6
+class, and every class it names still exists. What follows are faults that predate the port,
+except the last two, which are housekeeping.
+
+**The console could be watched through a wall.** `RimtendoESConsole` did not set
+`watchBuildingInSameRoom`. The field defaults to `false`, and all five watch-buildings in Core set
+it: the three televisions, the horseshoes pin and the hoopstone ring. Without it, the watch cells
+`WatchBuildingUtility` hands out are not constrained to the console's room, so the area drawn by
+`PlaceWorker_WatchArea` — and the cells colonists actually walk to — spilled into whatever is next
+door. Set to `true`.
+
+**The three recreation jobs did not allow an opportunistic prefix.** `allowOpportunisticPrefix`
+defaults to `false` and every recreation `JobDef` in Core sets it to `true`. It is what lets a pawn
+heading for the table pick up something on the way. Set on all three.
+
+**A downed colonist would crawl to the console.** `isCrawlingIfDowned` defaults to `true`. Vanilla's
+`WatchTelevision` sets it to `false`, because the job carries `canDoWhileInBed` and a bedridden pawn
+should watch from where they are. `PlayRimtendoES` is the same job on the same driver, and now says
+the same thing.
+
+**The screen glow was missing.** `effectWatching` is `WatchingTelevision` on all three vanilla
+televisions and on nothing else. Added.
+
+**Seven unused abstract bases dropped, two renamed.** `CPMods_Bases.xml` is shipped identically by
+eight subscribed mods — Rimmu-Nation Clothing and Camping Stuff, Military Furniture, DOOM UAC
+Furniture, the two Red Horse factions, this mod's own B18 ancestor, and this mod. The two Retro Joy
+actually inherits from are now `RetroJoy_BuildingBase` and `RetroJoy_FurnitureBase`. Names of
+abstract defs never reach a save, so this is invisible.
+
+The rename is for legibility, and it is worth writing down that it is **not** a fix, because the
+first draft of this file claimed it was. Eight mods declaring the same nine abstract names looks
+like a clash and is not one. `XmlInheritance` keeps `nodesByName` as a
+`Dictionary<string, List<XmlInheritanceNode>>`, each node carrying the `ModContentPack` it came
+from, and `GetBestParentFor` picks among the homonyms the one belonging to the nearest mod in load
+order. Every mod resolves to its own copy, and nothing is logged. Homonyms across mods are a
+supported arrangement.
+
+Dropping the other seven also removed the mod's only two dead fields: `CPBenchBase` wrote
+`workSpeedPenaltyOutdoors` and `workSpeedPenaltyTemperature`, neither of which is on
+`BuildingProperties` any more. Nothing in the mod inherited from it, so they were never doing
+anything.
+
+**Textures moved out of `Things/Furniture/`.** RimWorld's texture database is keyed on path across
+all mods, so `Things/Furniture/SmallTable` and `Things/Furniture/SofaChair` are one collision away
+from any other furniture mod, and the last mod loaded wins. They now live under
+`Things/RetroJoy/`, named after the defs that use them:
+
+| Was | Is |
+|---|---|
+| `Things/Furniture/SofaChair_{north,east,south}` | `Things/RetroJoy/RetroArmchair_{north,east,south}` |
+| `Things/Furniture/SmallTable` | `Things/RetroJoy/RetroSmallTable` |
+| `Things/Furniture/RESTube_{north,east,south}` | `Things/RetroJoy/RimtendoES_{north,east,south}` |
+| `Things/Furniture/RockemSockem` | `Things/RetroJoy/RockemSockem` |
+| `Things/Furniture/DungeonsNDragons{,_m}` | `Things/RetroJoy/DNRandies{,_m}` |
+
+The `_m` suffix on the last one is `Graphic_Single.MaskSuffix`, and it is kept: the mask is what
+keeps the figures on the game board from being tinted by the table's stuff colour.
+
+**Labels lowercased**, for the two that are common nouns: `Retro armchair` and `Retro table
+(small)` became `retro armchair` and `retro table (small)`, and `Rimtendo Console` became
+`Rimtendo console`. RimWorld capitalises a label itself where a sentence starts with it
+(`Def.LabelCap`) and leaves it alone mid-sentence, which is why every label in Core is lowercase
+but for proper nouns. `Rock'em Sock'em` and `Dungeons and Randies` are proper nouns and were left
+alone.
+
+**French added.** 13 entries across `ThingDef`, `JoyKindDef` and `JobDef`. The English stays in the
+defs, where it is the game's fallback.
+
+## What did not change
+
+The five buildings' stats, their costs, their stuff categories, the research that gates the
+console, the recreation durations and gain rates, the skills the games train, the `JoyKindDef`, and
+the artwork. The original `defName`s are kept, so a save moves between the two mods without losing
+anything, and the original is declared in `<incompatibleWith>`.
+
+## Notes from the port
+
+- The mod ships **no C# at all**, and every class it names is RimWorld's:
+  `JoyGiver_WatchBuilding`, `JoyGiver_InteractBuildingSitAdjacent`, `JobDriver_SitFacingBuilding`,
+  `JobDriver_PlayPoker`, `JobDriver_WatchTelevision`. All five are still in 1.6.
+- Original `packageId`: **`CP.Retro.Joy`**. Replaced by `nelim.retrojoy`, and the original is
+  declared incompatible.
+- `<watchBuildingStandDistanceRange>` was written as `<min>2</min><max>4</max>` where Core writes
+  `2~4`. That looked like a breakage — `IntRange` is a `ParseHelper` type, and a node with element
+  children never reaches `ParseHelper` — but it is not one: `DirectXmlToObject` falls through to
+  reflection over the type's fields, and `IntRange`'s fields are named `min` and `max`. Core does
+  the same thing itself in three places, among them `metalShrapnelCountRange` in
+  `Ethereal_Skyfallers.xml`. Rewritten as `2~4` for readability only.
+- **Shared Joys needs nothing added for these three buildings.** It accepts a building as a hangout
+  spot when a `JoyGiverDef` names its `ThingDef` in `<thingDefs>`, and all three do. That is the
+  case *Shared Joys - All Recreation* exists to work around, not one it has to handle.
+- The mod's own `About/Changelog.txt` was dropped; its four entries are folded into `CHANGELOG.md`
+  as the mod's history before the port.
+
+## A note on the Dungeons and Randies texture
+
+`DNRandies.png` is a small collage of what appears to be photographed tabletop material — a battle
+map, cards, miniatures and dice. Whether any of it is Chicken Plucker's own could not be
+established, and his own credits line — *TSR and Wizards of the Coast for D&D* — reads as an
+acknowledgement that some of it is not. It is redistributed here on the same footing as the rest of
+the mod, and it comes down on the same request.
+
+## Adoption
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this
+or any other of my mods, including publishing a continuation of it. All credit must be preserved.
