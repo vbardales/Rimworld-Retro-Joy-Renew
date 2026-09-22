@@ -8,7 +8,7 @@ packageId:      nelim.retrojoy
 repo:           Rimworld-Retro-Joy-Renew
 visibility:     public
 detached:       yes
-stage:          preTest
+stage:          done
 licence:        silent
 licence_at:     ATTRIBUTION.md documents five source checks and no permission
 dependencies:   none
@@ -18,7 +18,7 @@ workshop:
 remaining:
   - unverified: in-game loading, English/French display, recreation behaviour, log output, and save compatibility
   - unverified: execute the written Pickle suite in separate English and French WSL passes and review the capture
-session:        2026-09-22, revision 8530395
+session:        2026-09-22, revision 85b9f92
 updated:        2026-09-22
 ---
 
@@ -26,7 +26,7 @@ updated:        2026-09-22
 
 ## Audit — 2026-09-22
 
-**Current stage: `preTest`.** RetroJoyRenew is now an autonomous `main` repository connected to
+**Current stage: `done`.** RetroJoyRenew is now an autonomous `main` repository connected to
 `https://github.com/vbardales/Rimworld-Retro-Joy-Renew.git`. Its pre-existing remote history
 (`2c61b21`) was fetched and merged into the local root commit rather than replaced; the resulting
 merge commit `088c925` was pushed and verified at `origin/main`. The parent monorepo's unrelated
@@ -79,16 +79,17 @@ keys with zero errors. The primary description ends with the required exact GitH
 link. Options, localization, no-dependency declaration, tests and Pickle scenarios support the
 completed ordered transitions through `preTest`.
 
-## Independent test evidence
+## Tests for `preTest → done`
 
-`Tests/Test-RetroJoyXml.ps1` was executed successfully against `Mod/`. It validates package identity,
-the original-mod incompatibility, five retained ThingDefs, all four port corrections, and French XML
-resources. `Tests/Pickle/` contains the isolated companion and Gherkin suite: its no-dependency scenario
-checks the loaded mod and core Defs, while its review scenario reserves the colony-visible recreation
-evidence for a real game. No Windows RimWorld was launched.
+`Tests/Test-RetroJoyXml.ps1` was re-executed successfully after the asset delivery. It validates
+package identity, the original-mod incompatibility, five retained ThingDefs, all four port
+corrections, and French XML resources. The supplied XML field/type/reference and DefInjected checks
+also pass. `Tests/Pickle/` contains the isolated companion and Gherkin suite: its no-dependency
+scenario checks the loaded mod and core Defs, while its review scenario reserves colony-visible
+recreation evidence for a real game. No Windows RimWorld was launched.
 
 ## Next required transition
 
-To reach `done`, rerun the offline test after this asset/documentation change and record the result.
-The later Pickle execution remains pending and must use the shared WSL launcher and machine lock;
-Windows RimWorld must not be launched.
+To reach `tested`, execute the written Pickle suite in separate English and French WSL passes,
+inspect the required capture, and record the logs and evidence. This must use the shared WSL launcher
+and machine lock; Windows RimWorld must not be launched.
