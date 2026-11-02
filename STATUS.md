@@ -1,14 +1,14 @@
 ---
 localization:   complete
 translation_en: complete
-translation_fr: complete
+translation_fr: unchecked
 settings_audit: not_applicable
 mod:            Retro Joy Renew (unofficial)
 packageId:      nelim.retrojoy
 repo:           Rimworld-Retro-Joy-Renew
 visibility:     public
 detached:       yes
-stage:          done
+workflow_stage: setupRepo
 licence:        silent
 licence_at:     ATTRIBUTION.md documents five source checks and no permission
 dependencies:   none
@@ -16,10 +16,13 @@ showcase:       generated preview and maintainer-generated ModIcon checked
 tested_on:
 workshop:
 remaining:
+  - open 1.h: STATUS.md not from template; front matter lacks remote, upstream_mod_remotes (and the full 1.h field set)
+  - open 1.a: no proof of the duplicate check (Search-Workshop.sh) in the repo
   - unverified: in-game loading, English/French display, recreation behaviour, log output, and save compatibility
   - unverified: execute the written Pickle suite in separate English and French WSL passes and review the capture
 session:        2026-09-22, revision 85b9f92
-updated:        2026-09-22
+updated:        2026-11-02
+protocols_read_sha: a160b315a07a4a460ba11b9b1ad426f64b41d956
 ---
 
 # Retro Joy Renew — status
