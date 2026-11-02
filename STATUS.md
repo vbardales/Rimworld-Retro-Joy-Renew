@@ -14,8 +14,8 @@ localization: complete
 translation_en: complete
 translation_fr: unchecked
 dependencies: none
-workshop: 3811391689           # from untracked Mod/About/PublishedFileId.txt; publication state to confirm
-published: no
+workshop: 3811391689           # Mod/About/PublishedFileId.txt (untracked)
+published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-11-02)
 tested_on: never
 remaining:
   - "2026-11-02: open 1.a: no proof in the repo of the duplicate check (Search-Workshop.sh)"
