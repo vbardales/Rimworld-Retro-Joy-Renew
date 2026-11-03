@@ -19,7 +19,10 @@ published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-
 tested_on: never
 remaining:
   - "2026-11-02: unverified: in-game loading, English/French display, recreation behaviour, log output, and save compatibility"
-  - "2026-11-02: unverified: execute the written Pickle suite in separate English and French WSL passes and review the capture"
+  - "2026-11-03: unverified: Pickle tickets 20261103-093326-328-10d7 (English) and 20261103-093327-867-1427 (French), initial suite on 323b25d, evidence in Tests/Pickle/Inbox/initial-en and initial-fr; read summary.json and junit.xml at RUN_DONE, review the @review capture"
+  - "2026-11-03: feature: script the ten scenarios of TESTING.md in Tests/Pickle (ask NPT for missing steps: colonist plays at table, downed colonist from bed, building buildable after research); small tickets afterwards"
+  - "2026-11-03: unverified: 8.m code review (Opus sub-agent, once after the tests), 8.l evidence and tested_on"
+  - "2026-11-03: decision owner: CHANGELOG.md heading [1.0.0] 2026-09-05 First release vs hidden 0.1.0; About.xml description names 1.6 (Check-Status WARN, touches Mod/)"
 protocols_read_sha: 2e5ab7ac86307bf3c840414a7d487c6a48c60ec1
 updated: 2026-11-03    # 2.e: owner validated Art/Preview-source.png, 2026-11-03
 ---
