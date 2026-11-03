@@ -5,7 +5,7 @@ repo: Rimworld-Retro-Joy-Renew
 remote: https://github.com/vbardales/Rimworld-Retro-Joy-Renew.git
 visibility: public
 detached: yes
-workflow_stage: declareDependencies[1.0.0]
+workflow_stage: settings[1.0.0]
 licence: silent
 licence_at: "2026-09-22: ATTRIBUTION.md documents five source checks (no LICENSE file, no About.xml mention, no linked repository, nothing in the Steam description, nothing on the author's profile) and no permission"
 upstream_mod_remotes: N/A      # source mod 1842663639 links no repository (ATTRIBUTION.md, five checks)
@@ -25,6 +25,13 @@ updated: 2026-11-03    # 2.e: owner validated Art/Preview-source.png, 2026-11-03
 ---
 
 # Retro Joy Renew — status
+
+## Dependencies — 2026-11-03, revision 37c2f95
+
+None. `About.xml` declares no `modDependencies`, `loadAfter` or `loadBefore`; `incompatibleWith` lists
+`CP.Retro.Joy` (the source mod, same defNames). `Mod/` has no `Patches/`, no `LoadFolders.xml` and no
+`MayRequire`; every referenced type and def resolves to Core. No DLC is referenced. The mod adds no
+animal, so the four animal integrations of ANIMALS.md do not apply. `supportedVersions`: 1.6.
 
 ## 1.a duplicate check — 2026-11-03
 
