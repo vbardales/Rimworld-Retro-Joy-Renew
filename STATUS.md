@@ -5,7 +5,7 @@ repo: Rimworld-Retro-Joy-Renew
 remote: https://github.com/vbardales/Rimworld-Retro-Joy-Renew.git
 visibility: public
 detached: yes
-workflow_stage: settings[1.0.0]
+workflow_stage: localize[1.0.0]
 licence: silent
 licence_at: "2026-09-22: ATTRIBUTION.md documents five source checks (no LICENSE file, no About.xml mention, no linked repository, nothing in the Steam description, nothing on the author's profile) and no permission"
 upstream_mod_remotes: N/A      # source mod 1842663639 links no repository (ATTRIBUTION.md, five checks)
@@ -25,6 +25,17 @@ updated: 2026-11-03    # 2.e: owner validated Art/Preview-source.png, 2026-11-03
 ---
 
 # Retro Joy Renew — status
+
+## Settings audit — 2026-11-03, revision 8252f82
+
+`settings_audit: not_applicable`. Inventory read in `Mod/`: no assembly and no `Source/`, so no
+`ModSettings` class and no Mod options page; no `MainButtonDef` and no word "Settings" in `Mod/Defs` or
+`Mod/Languages`, so no MainButtons shortcut; no inherited setting (no dependency, no optional
+integration, see Dependencies). The mod is fixed content: five buildings, three jobs, three joy givers
+and one joy kind, with the values of the source mod. No behaviour gives a player a concrete reason to
+tune it, so no option is proposed. Absence of an empty page and of a shortcut is established from these
+sources, not from the absence of C#. Application moments, persistence and RIMMSQOL checks do not apply.
+In-game confirmation that no Mod options entry appears is part of `playTests`.
 
 ## Dependencies — 2026-11-03, revision 37c2f95
 
