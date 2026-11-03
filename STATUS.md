@@ -5,7 +5,7 @@ repo: Rimworld-Retro-Joy-Renew
 remote: https://github.com/vbardales/Rimworld-Retro-Joy-Renew.git
 visibility: public
 detached: yes
-workflow_stage: setupRepo      # 1.a open
+workflow_stage: makeSources
 licence: silent
 licence_at: "2026-09-22: ATTRIBUTION.md documents five source checks (no LICENSE file, no About.xml mention, no linked repository, nothing in the Steam description, nothing on the author's profile) and no permission"
 upstream_mod_remotes: N/A      # source mod 1842663639 links no repository (ATTRIBUTION.md, five checks)
@@ -18,14 +18,21 @@ workshop: 3811391689           # Mod/About/PublishedFileId.txt (untracked)
 published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-11-02)
 tested_on: never
 remaining:
-  - "2026-11-02: open 1.a: no proof in the repo of the duplicate check (Search-Workshop.sh)"
   - "2026-11-02: unverified: in-game loading, English/French display, recreation behaviour, log output, and save compatibility"
   - "2026-11-02: unverified: execute the written Pickle suite in separate English and French WSL passes and review the capture"
-protocols_read_sha: 0780ca047aea43f76e2cd7beeb16ae995344952d
-updated: 2026-11-02
+protocols_read_sha: b20ed28d871918ba9c5a251c38881b9c51b2c1f3
+updated: 2026-11-03
 ---
 
 # Retro Joy Renew — status
+
+## 1.a duplicate check — 2026-11-03
+
+`Search-Workshop.sh` over the five retained building defNames (`RetroArmchair`, `RetroSmallTable`,
+`RimtendoESConsole`, `RockemSockemTable`, `DNRandiesTable`): 15 hits, in three places only. They are
+the source mod 1842663639, this mod's own Workshop item 3811391689 and the local
+`Mods/RetroJoyRenew` link. No other Workshop mod declares them. Hits file:
+`%LOCALAPPDATA%\Temp\rimworld-search\retrojoy-dup\hits.txt`.
 
 ## Audit — 2026-09-22
 
