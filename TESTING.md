@@ -5,3 +5,18 @@
 Run by hand: `powershell -NoProfile -ExecutionPolicy Bypass -File Tests\Test-RetroJoyXml.ps1`.
 
 Pickle covers only game-owned evidence: loading the definitions, observing the three recreation buildings in a colony, and reviewing English/French captures. There are no settings, dependencies, optional integrations, DLC branches, C# logic, or restart-specific state to duplicate.
+
+## Functional scenarios (run at `playTests`)
+
+One scenario per behaviour the description promises. Figures were read in `Mod/Defs`.
+
+1. **Console in the Joy tab.** Precondition: `TubeTelevision` researched. Action: open Architect, Joy. Expected: `Rimtendo console` is buildable. Without the research it is absent.
+2. **Console is watched like a television.** Precondition: a built console, a colonist with Sight. Action: let the colonist pick recreation. Expected: the job reads "playing on Rimtendo console" (`PlayRimtendoES`), joy kind `Gaming_Video` (VIDEO GAMING), with the television screen glow.
+3. **Console does not work through a wall.** Precondition: a console and a colonist in the next room. Expected: the colonist does not use it (`watchBuildingInSameRoom` true).
+4. **Bedridden colonist plays from bed.** Precondition: a downed colonist in the console's room. Expected: the job is available and the colonist does not crawl to the console (`isCrawlingIfDowned` false).
+5. **Rock'em Sock'em.** Precondition: built table. Expected: colonists sit adjacent and play `PlayRockemSockem` (joy kind `Gaming_Dexterity`), Melee skill gains experience.
+6. **Dungeons and Randies.** Precondition: built 2x2 table. Expected: colonists play `PlayDNRandies` (`Gaming_Cerebral`), Intellectual skill gains experience; the number of players at once is confirmed in game against the "up to eight" claim (edge-adjacent cells of a 2x2 table).
+7. **Opportunistic hauling.** Expected: a colonist walking to a table can pick up an item in their path (`allowOpportunisticPrefix`).
+8. **Furniture.** Expected: `Retro armchair` and `Retro table (small)` appear in the Furniture tab.
+9. **English and French.** Expected: labels, descriptions and job report strings display in both languages with no raw key and no truncation; `Rock'em Sock'em` stays English in French.
+10. **Log and save.** Expected: no red error in `Player.log` from this mod on a new game and on an existing save; `CP.Retro.Joy` cannot be loaded together with this mod (declared incompatible).
