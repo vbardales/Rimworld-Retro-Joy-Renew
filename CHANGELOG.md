@@ -6,8 +6,8 @@ All notable changes to this mod are documented here.
 
 ### Changed
 
-- Replaced the inherited Workshop preview with an original Retro Joy preview generated with Codex
-  (OpenAI); its full-resolution source is retained at `Art/Preview.png`.
+- Replaced the inherited Workshop preview with an original Retro Joy preview; its text-free
+  full-resolution source is retained at `Art/Preview-source.png`.
 - Installed the maintainer-generated ModIcon at 128 px, preserving its full-resolution source under
   `Art/ModIcon-source.png`.
 
