@@ -20,7 +20,7 @@
   <!-- EN: Rimtendo console -->
   <RimtendoESConsole.label>console Rimtendo</RimtendoESConsole.label>
   <!-- EN: Plays a selection of classic games on the totally non-copyright console "Rimtendo Entertainment System". Retro TV included. -->
-  <RimtendoESConsole.description>Permet de jouer à une sélection de grands classiques sur la console totalement libre de droits « Rimtendo Entertainment System ». Télévision rétro comprise.</RimtendoESConsole.description>
+  <RimtendoESConsole.description>Permet de jouer à une sélection de grands classiques sur la console « Rimtendo Entertainment System », qui ne viole absolument aucun droit d'auteur. Télévision rétro comprise.</RimtendoESConsole.description>
 
   <!--
     The label is kept in English on purpose: it is the name of a toy, and the joke only works
