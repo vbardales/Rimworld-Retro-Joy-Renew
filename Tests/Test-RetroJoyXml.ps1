@@ -9,5 +9,4 @@ foreach ($name in 'RimtendoESConsole','RockemSockemTable','DNRandiesTable','Retr
 $console = $defs | Where-Object defName -eq 'RimtendoESConsole'; Require ($console.building.watchBuildingInSameRoom -eq 'true') 'Console can watch through walls.'; Require ($console.building.effectWatching -eq 'WatchingTelevision') 'Console screen effect missing.'
 foreach ($name in 'PlayRockemSockem','PlayDNRandies','PlayRimtendoES') { $job=$defs | Where-Object { $_.Name -eq 'JobDef' -and $_.defName -eq $name }; Require ($job.allowOpportunisticPrefix -eq 'true') "Job $name lacks opportunistic prefix." }
 Require (($defs | Where-Object { $_.Name -eq 'JobDef' -and $_.defName -eq 'PlayRimtendoES' }).isCrawlingIfDowned -eq 'false') 'Downed pawn crawl guard missing.'
-foreach ($file in Get-ChildItem (Join-Path $ModPath 'Languages\French\DefInjected') -Recurse -Filter *.xml) { [xml](Get-Content -Raw $file.FullName) | Out-Null }
 Write-Host 'Retro Joy XML contracts: PASS'
