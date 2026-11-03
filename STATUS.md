@@ -5,7 +5,7 @@ repo: Rimworld-Retro-Joy-Renew
 remote: https://github.com/vbardales/Rimworld-Retro-Joy-Renew.git
 visibility: public
 detached: yes
-workflow_stage: makeSources
+workflow_stage: code[1.0.0]
 licence: silent
 licence_at: "2026-09-22: ATTRIBUTION.md documents five source checks (no LICENSE file, no About.xml mention, no linked repository, nothing in the Steam description, nothing on the author's profile) and no permission"
 upstream_mod_remotes: N/A      # source mod 1842663639 links no repository (ATTRIBUTION.md, five checks)
@@ -20,8 +20,8 @@ tested_on: never
 remaining:
   - "2026-11-02: unverified: in-game loading, English/French display, recreation behaviour, log output, and save compatibility"
   - "2026-11-02: unverified: execute the written Pickle suite in separate English and French WSL passes and review the capture"
-protocols_read_sha: b20ed28d871918ba9c5a251c38881b9c51b2c1f3
-updated: 2026-11-03
+protocols_read_sha: d17469c9c6e799a503821573de9ce2aa18e057d6
+updated: 2026-11-03    # 2.e: owner validated Art/Preview-source.png, 2026-11-03
 ---
 
 # Retro Joy Renew — status
