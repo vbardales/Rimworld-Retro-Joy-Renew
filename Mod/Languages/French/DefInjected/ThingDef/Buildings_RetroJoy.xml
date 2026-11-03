@@ -23,11 +23,13 @@
   <RimtendoESConsole.description>Permet de jouer à une sélection de grands classiques sur la console totalement libre de droits « Rimtendo Entertainment System ». Télévision rétro comprise.</RimtendoESConsole.description>
 
   <!--
-    The label is left in English on purpose: it is the name of a toy, and the joke only works
-    under that name.
+    The label is kept in English on purpose: it is the name of a toy, and the joke only works
+    under that name. The entry is explicit so the French file covers every label.
   -->
+  <!-- EN: Rock'em Sock'em -->
+  <RockemSockemTable.label>Rock'em Sock'em</RockemSockemTable.label>
   <!-- EN: The ancient game of two robots beating each other to death against their will for your entertainment.\n\nNo wonder Mechanoids hate us. -->
-  <RockemSockemTable.description>L'antique jeu où deux robots se rouent de coups jusqu'à la mort, contre leur gré, pour votre bon plaisir.\n\nPas étonnant que les mécanoïdes nous détestent.</RockemSockemTable.description>
+  <RockemSockemTable.description>L'antique jeu où deux robots se rouent de coups jusqu'à la mort, contre leur gré, pour le plaisir de tous.\n\nPas étonnant que les mécanoïdes détestent l'humanité.</RockemSockemTable.description>
 
   <!--
     "Randies" is a pun on Dragons and on Randy Random, whom the French game calls Randy Hasard.
