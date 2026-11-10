@@ -50,9 +50,9 @@ Feature: Retro Joy Renew recreation behaves as the description promises
   Scenario: a downed colonist plays on the console from bed
     Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 87)
     And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 87) is powered
-    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (73, 88)
+    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (72, 89)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
-    And Nelim's Pickle Tools: "Jet" is downed in the bed at (73, 88)
+    And Nelim's Pickle Tools: "Jet" is downed in the bed at (72, 89)
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: the joy giver "PlayRimtendoES" job is forced on "Jet"
     Then "Jet" has job "PlayRimtendoES"
