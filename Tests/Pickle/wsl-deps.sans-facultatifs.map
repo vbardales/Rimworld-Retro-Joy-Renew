@@ -1,0 +1,7 @@
+# Minimal pass: the mod and the shared Pickle tools, no optional mod. Plays retrojoy.feature and 02-recreation.feature.
+# -Mod RetroJoyRenew -DepMap wsl-deps.sans-facultatifs.map -Language English (then French)
+nelim.pickletools.stagedecor   path:PickleTools/StageDecor/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.deffields    path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.camerazoom   path:PickleTools/CameraZoom/Mod
+nelim.pickletools              path:PickleTools/Tests/Pickle/StandaloneBase/Mod
