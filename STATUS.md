@@ -16,10 +16,11 @@ translation_fr: complete
 dependencies: none
 workshop: 3811391689           # Mod/About/PublishedFileId.txt (untracked)
 published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-11-02)
-tested_on: never
+tested_on: 2026-11-06 pickle 323b25d
 remaining:
   - "2026-11-10: verified: initial Pickle suite green EN and FR (2/2 each, exitReason passed, run 2026-11-06 on 1.6.4871), loading, no ERROR from this mod in Player.log; evidence minified in Tests/Pickle/Evidence/initial-en and initial-fr. Still unverified: English/French display, recreation behaviour, log output beyond load, save compatibility. The @review scenario only asserts 'no errors were logged' and takes no capture: nothing to review visually"
-  - "2026-11-10: protocols re-read to f81cf305; Check-Status WARN rimworld-version (About.xml) and INFO FRENCH_REVIEW.md old name (regenerate with Make-TranslationReview.ps1) still open"
+  - "2026-11-10: replay audit, first unfulfilled 8.d, stage unchanged; open: 8.d (@review scenario takes no capture: ask NPT for a capture step), 8.g (8 of 10 TESTING.md scenarios not scripted), 8.i (EN/FR display unverified), 8.k, 8.m (no code_review_sha), 8.n. 6.f fixed in place (TRANSLATION_REVIEW.md replaces FRENCH_REVIEW.md). 8.l: docs/runs/history.md and tested_on written"
+  - "2026-11-10: Check-Status WARN rimworld-version (About.xml description names 1.6, touches Mod/); pending owner mission: convert Tests/Test-RetroJoyXml.ps1 to the generated test shape (Rule-OwnValues.ps1, ask CI/CD for generate-publish-workflow.sh --regenerate, LOCAL_SCRIPTS.md row, tell Audit)"
   - "2026-11-03: feature: script the ten scenarios of TESTING.md in Tests/Pickle (ask NPT for missing steps: colonist plays at table, downed colonist from bed, building buildable after research); small tickets afterwards"
   - "2026-11-03: unverified: 8.m code review (Opus sub-agent, once after the tests), 8.l evidence and tested_on"
   - "2026-11-03: decision owner: CHANGELOG.md heading [1.0.0] 2026-09-05 First release vs hidden 0.1.0; About.xml description names 1.6 (Check-Status WARN, touches Mod/)"
