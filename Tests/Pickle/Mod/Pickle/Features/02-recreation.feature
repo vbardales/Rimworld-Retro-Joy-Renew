@@ -21,9 +21,10 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @timeout:300
   Scenario: a colonist plays on the console like on a television
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
-    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 88) is powered
-    And Nelim's Pickle Tools: I place the decor "Armchair" owned by the colonists at (72, 86)
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 87)
+    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 87) is powered
+    And Nelim's Pickle Tools: I place the decor "Armchair" owned by the colonists at (72, 85)
+    And Nelim's Pickle Tools: I place the decor "Armchair" owned by the colonists at (72, 89)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Video"
@@ -36,18 +37,18 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @review @timeout:300
   Scenario: a colonist in the next room cannot use the console through the wall
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
-    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 88) is powered
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 87)
+    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 87) is powered
     And Nelim's Pickle Tools: "Jet" stands at (77, 88)
-    When Nelim's Pickle Tools: the reasons why "Jet" cannot take "RimtendoESConsole" at (72, 88) for joy are logged
+    When Nelim's Pickle Tools: the reasons why "Jet" cannot take "RimtendoESConsole" at (72, 87) for joy are logged
     Then no errors were logged
 
   @timeout:300
   Scenario: a downed colonist plays on the console from bed
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
-    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 88) is powered
-    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (73, 86)
-    And Nelim's Pickle Tools: "Jet" is downed in the bed at (73, 86)
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 87)
+    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 87) is powered
+    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (73, 85)
+    And Nelim's Pickle Tools: "Jet" is downed in the bed at (73, 85)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: the joy giver "PlayRimtendoES" job is forced on "Jet"
