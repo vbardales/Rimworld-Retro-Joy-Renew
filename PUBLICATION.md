@@ -23,3 +23,20 @@ None. The mod declares `CP.Retro.Joy` as incompatible. See `STATUS.md`, "Depende
 ## Content questions
 
 No adult content.
+
+## Steam change notes
+
+### 1.0.0
+
+```
+[b]1.0.0[/b]
+First release of the port of [CP] Retro Joy to RimWorld 1.6.
+[list]
+[*] The Rimtendo console's watch area no longer runs through walls: colonists play it from its own room.
+[*] Recreation jobs let a colonist haul something on the way to the table.
+[*] A downed colonist no longer crawls to the console.
+[*] The console shows the screen glow of the vanilla televisions.
+[*] French translation added.
+[*] New preview image and mod icon.
+[/list]
+```
