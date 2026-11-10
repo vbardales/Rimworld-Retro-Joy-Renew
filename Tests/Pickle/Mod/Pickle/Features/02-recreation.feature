@@ -30,7 +30,9 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Video"
     And Nelim's Pickle Tools: the joy giver "PlayRimtendoES" job is forced on "Jet"
     Then "Jet" has job "PlayRimtendoES"
-    When I wait 600 ticks
+    When I wait 300 ticks
+    Then "Jet" has job "PlayRimtendoES"
+    When I wait 300 ticks
     Then Nelim's Pickle Tools: "Jet"'s joy level is higher than remembered
     And Nelim's Pickle Tools: "Jet"'s joy tolerance for the kind "Gaming_Video" is higher than remembered
     And no errors were logged
