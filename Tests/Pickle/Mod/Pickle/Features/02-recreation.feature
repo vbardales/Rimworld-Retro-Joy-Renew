@@ -23,7 +23,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
   Scenario: a colonist plays on the console like on a television
     Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
     And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 88) is powered
-    And Nelim's Pickle Tools: I place the decor "Armchair" on a cardinal cell next to the nearest "RimtendoESConsole"
+    And Nelim's Pickle Tools: I place the decor "Armchair" owned by the colonists at (72, 86)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Video"
@@ -60,28 +60,28 @@ Feature: Retro Joy Renew recreation behaves as the description promises
   Scenario: colonists play Rock'em Sock'em and train melee
     Given Nelim's Pickle Tools: I place the decor "RockemSockemTable" owned by the colonists at (72, 88)
     And Nelim's Pickle Tools: I place the decor "DiningChair" on a cardinal cell next to the nearest "RockemSockemTable"
-    And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
-    When Nelim's Pickle Tools: I remember "Jet"'s skill "Melee" experience
-    And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Dexterity"
-    And Nelim's Pickle Tools: the joy giver "PlayRockemSockem" job is forced on "Jet"
-    Then "Jet" has job "PlayRockemSockem"
+    And Nelim's Pickle Tools: the schedule of "Larson" is joy all day
+    When Nelim's Pickle Tools: I remember "Larson"'s skill "Melee" experience
+    And Nelim's Pickle Tools: I remember "Larson"'s joy tolerance for the kind "Gaming_Dexterity"
+    And Nelim's Pickle Tools: the joy giver "PlayRockemSockem" job is forced on "Larson"
+    Then "Larson" has job "PlayRockemSockem"
     When I wait 900 ticks
-    Then Nelim's Pickle Tools: "Jet"'s skill "Melee" experience is higher than remembered
-    And Nelim's Pickle Tools: "Jet"'s joy tolerance for the kind "Gaming_Dexterity" is higher than remembered
+    Then Nelim's Pickle Tools: "Larson"'s skill "Melee" experience is higher than remembered
+    And Nelim's Pickle Tools: "Larson"'s joy tolerance for the kind "Gaming_Dexterity" is higher than remembered
     And no errors were logged
 
   @timeout:300
   Scenario: colonists play Dungeons and Randies and train intellectual
     Given Nelim's Pickle Tools: I place the decor "DNRandiesTable" owned by the colonists at (72, 87)
     And Nelim's Pickle Tools: I place the decor "DiningChair" on a cardinal cell next to the nearest "DNRandiesTable"
-    And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
-    When Nelim's Pickle Tools: I remember "Jet"'s skill "Intellectual" experience
-    And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Cerebral"
-    And Nelim's Pickle Tools: the joy giver "PlayDNRandies" job is forced on "Jet"
-    Then "Jet" has job "PlayDNRandies"
+    And Nelim's Pickle Tools: the schedule of "Larson" is joy all day
+    When Nelim's Pickle Tools: I remember "Larson"'s skill "Intellectual" experience
+    And Nelim's Pickle Tools: I remember "Larson"'s joy tolerance for the kind "Gaming_Cerebral"
+    And Nelim's Pickle Tools: the joy giver "PlayDNRandies" job is forced on "Larson"
+    Then "Larson" has job "PlayDNRandies"
     When I wait 900 ticks
-    Then Nelim's Pickle Tools: "Jet"'s skill "Intellectual" experience is higher than remembered
-    And Nelim's Pickle Tools: "Jet"'s joy tolerance for the kind "Gaming_Cerebral" is higher than remembered
+    Then Nelim's Pickle Tools: "Larson"'s skill "Intellectual" experience is higher than remembered
+    And Nelim's Pickle Tools: "Larson"'s joy tolerance for the kind "Gaming_Cerebral" is higher than remembered
     And no errors were logged
 
   @timeout:300
