@@ -5,7 +5,7 @@
 # run in both languages; the console label itself is not asserted because the two languages differ.
 # Every scenario builds its own 5 by 5 room at (70, 85) on a freshly loaded test-colony; Jet is a colonist of that save.
 # Written 2026-11-10 on steps compiled and not yet played: a red scenario may be a step to fix, read the failure before the mod.
-@requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.deffields @requires:nelim.pickletools.screenshotstudio
+@requires:nelim.pickletools.stagedecor @requires:nelim.pickletools @requires:nelim.pickletools.deffields @requires:nelim.pickletools.screenshotstudio
 Feature: Retro Joy Renew recreation behaves as the description promises
 
   Background:
