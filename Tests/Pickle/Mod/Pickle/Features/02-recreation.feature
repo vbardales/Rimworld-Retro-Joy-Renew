@@ -26,6 +26,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     And Nelim's Pickle Tools: I place the decor "Armchair" owned by the colonists at (72, 85)
     And Nelim's Pickle Tools: I place the decor "Armchair" owned by the colonists at (72, 89)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
+    And Nelim's Pickle Tools: "Jet" stands at (71, 86)
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Video"
     And Nelim's Pickle Tools: the joy giver "PlayRimtendoES" job is forced on "Jet"
@@ -64,6 +65,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     Given Nelim's Pickle Tools: I place the decor "RockemSockemTable" owned by the colonists at (72, 88)
     And Nelim's Pickle Tools: I place the decor "DiningChair" on a cardinal cell next to the nearest "RockemSockemTable"
     And Nelim's Pickle Tools: the schedule of "Larson" is joy all day
+    And Nelim's Pickle Tools: "Larson" stands at (70, 86)
     When Nelim's Pickle Tools: I remember "Larson"'s skill "Melee" experience
     And Nelim's Pickle Tools: I remember "Larson"'s joy tolerance for the kind "Gaming_Dexterity"
     And Nelim's Pickle Tools: the joy giver "PlayRockemSockem" job is forced on "Larson"
@@ -78,6 +80,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     Given Nelim's Pickle Tools: I place the decor "DNRandiesTable" owned by the colonists at (72, 87)
     And Nelim's Pickle Tools: I place the decor "DiningChair" on a cardinal cell next to the nearest "DNRandiesTable"
     And Nelim's Pickle Tools: the schedule of "Larson" is joy all day
+    And Nelim's Pickle Tools: "Larson" stands at (70, 86)
     When Nelim's Pickle Tools: I remember "Larson"'s skill "Intellectual" experience
     And Nelim's Pickle Tools: I remember "Larson"'s joy tolerance for the kind "Gaming_Cerebral"
     And Nelim's Pickle Tools: the joy giver "PlayDNRandies" job is forced on "Larson"
