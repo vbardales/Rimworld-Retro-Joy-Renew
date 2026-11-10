@@ -18,13 +18,13 @@ workshop: 3811391689           # Mod/About/PublishedFileId.txt (untracked)
 published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-11-02)
 tested_on: never
 remaining:
-  - "2026-11-02: unverified: in-game loading, English/French display, recreation behaviour, log output, and save compatibility"
-  - "2026-11-03: unverified: Pickle tickets 20261103-093326-328-10d7 (English) and 20261103-093327-867-1427 (French), initial suite on 323b25d, evidence in Tests/Pickle/Inbox/initial-en and initial-fr; read summary.json and junit.xml at RUN_DONE, review the @review capture"
+  - "2026-11-10: verified: initial Pickle suite green EN and FR (2/2 each, exitReason passed, run 2026-11-06 on 1.6.4871), loading, no ERROR from this mod in Player.log; evidence minified in Tests/Pickle/Evidence/initial-en and initial-fr. Still unverified: English/French display, recreation behaviour, log output beyond load, save compatibility. The @review scenario only asserts 'no errors were logged' and takes no capture: nothing to review visually"
+  - "2026-11-10: protocols re-read to f81cf305; Check-Status WARN rimworld-version (About.xml) and INFO FRENCH_REVIEW.md old name (regenerate with Make-TranslationReview.ps1) still open"
   - "2026-11-03: feature: script the ten scenarios of TESTING.md in Tests/Pickle (ask NPT for missing steps: colonist plays at table, downed colonist from bed, building buildable after research); small tickets afterwards"
   - "2026-11-03: unverified: 8.m code review (Opus sub-agent, once after the tests), 8.l evidence and tested_on"
   - "2026-11-03: decision owner: CHANGELOG.md heading [1.0.0] 2026-09-05 First release vs hidden 0.1.0; About.xml description names 1.6 (Check-Status WARN, touches Mod/)"
-protocols_read_sha: 2e5ab7ac86307bf3c840414a7d487c6a48c60ec1
-updated: 2026-11-03    # 2.e: owner validated Art/Preview-source.png, 2026-11-03
+protocols_read_sha: f81cf305355133d1ed901443c9f282d4670c7688
+updated: 2026-11-10    # initial Pickle runs read and sorted, protocols re-read
 ---
 
 # Retro Joy Renew — status

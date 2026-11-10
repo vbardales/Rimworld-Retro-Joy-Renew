@@ -1,0 +1,20 @@
+{
+  "panel": {
+    "title": "Retro Joy Renew (unofficial)",
+    "titleParts": [
+      { "text": "Retro Joy" },
+      { "text": "Renew (unofficial)" }
+    ],
+    "description": "Three new ways to unwind. Cartridges, cardboard and comfort."
+  },
+  "background": { "file": "Preview-source.png" },
+  "icon": { "file": "ModIcon-source.png" },
+  "echo": { "file": "echo-concept.png" },
+  "palette": {
+    "veil": "#38291E",
+    "inkPrimary": "#F7EEDF",
+    "inkSecondary": "#E0B06C",
+    "accent": "#E35F3A",
+    "badgeInk": "#17110D"
+  }
+}
