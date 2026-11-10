@@ -18,6 +18,7 @@ workshop: 3811391689           # Mod/About/PublishedFileId.txt (untracked)
 published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-11-02)
 tested_on: 2026-11-06 pickle 323b25d
 remaining:
+  - "2026-11-10: CI dry-run run 42887356749 on 490714a (ref = that SHA, 1.0.0): GREEN. Change note read from PUBLICATION.md, upload path and workshop.vdf checked, nothing sent to Steam. Gallery folder Art/Gallery not in the commit (gallery not made yet, expected); public page not readable (hidden item), comparisons skipped"
   - "2026-11-10: CI dry-run run 42887147624 on 7ff4216 (ref = that SHA, 1.0.0): change note OK, then FAILED ENOENT Mod/About/PublishedFileId.txt (untracked, not in the pinned commit). Commit it, push, rerun the dry-run on the new SHA (needs a new owner go)"
   - "2026-11-10: CI dry-run publish-tag.yml run 42886403096 on f4ca814 (ref main, version 1.0.0, mode dry-run): FAILED in changenote.mjs, Error: no \"### 1.0.0\" section found. PUBLICATION.md has no change note section for 1.0.0: owner text to write, then rerun the dry-run. No Steam contact, no secret"
   - "2026-11-10: verified: initial Pickle suite green EN and FR (2/2 each, exitReason passed, run 2026-11-06 on 1.6.4871), loading, no ERROR from this mod in Player.log; evidence minified in Tests/Pickle/Evidence/initial-en and initial-fr. Still unverified: English/French display, recreation behaviour, log output beyond load, save compatibility. The @review scenario only asserts 'no errors were logged' and takes no capture: nothing to review visually"
