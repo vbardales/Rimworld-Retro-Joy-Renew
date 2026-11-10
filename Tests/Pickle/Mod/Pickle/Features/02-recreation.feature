@@ -22,12 +22,13 @@ Feature: Retro Joy Renew recreation behaves as the description promises
   @timeout:300
   Scenario: a colonist plays on the console like on a television
     Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
+    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 88) is powered
     And Nelim's Pickle Tools: I place the decor "Armchair" on a cardinal cell next to the nearest "RimtendoESConsole"
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Video"
     And Nelim's Pickle Tools: the joy giver "PlayRimtendoES" job is forced on "Jet"
-    Then Nelim's Pickle Tools: the colonist "Jet" is doing the job "PlayRimtendoES"
+    Then "Jet" has job "PlayRimtendoES"
     When I wait 600 ticks
     Then Nelim's Pickle Tools: "Jet"'s joy level is higher than remembered
     And Nelim's Pickle Tools: "Jet"'s joy tolerance for the kind "Gaming_Video" is higher than remembered
@@ -36,6 +37,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
   @review @timeout:300
   Scenario: a colonist in the next room cannot use the console through the wall
     Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
+    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 88) is powered
     And Nelim's Pickle Tools: "Jet" stands at (77, 88)
     When Nelim's Pickle Tools: the reasons why "Jet" cannot take "RimtendoESConsole" at (72, 88) for joy are logged
     Then no errors were logged
@@ -43,12 +45,13 @@ Feature: Retro Joy Renew recreation behaves as the description promises
   @timeout:300
   Scenario: a downed colonist plays on the console from bed
     Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
+    And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 88) is powered
     And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (73, 86)
     And Nelim's Pickle Tools: "Jet" is downed in the bed at (73, 86)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: the joy giver "PlayRimtendoES" job is forced on "Jet"
-    Then Nelim's Pickle Tools: the colonist "Jet" is doing the job "PlayRimtendoES"
+    Then "Jet" has job "PlayRimtendoES"
     When I wait 600 ticks
     Then Nelim's Pickle Tools: "Jet"'s joy level is higher than remembered
     And no errors were logged
@@ -61,7 +64,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     When Nelim's Pickle Tools: I remember "Jet"'s skill "Melee" experience
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Dexterity"
     And Nelim's Pickle Tools: the joy giver "PlayRockemSockem" job is forced on "Jet"
-    Then Nelim's Pickle Tools: the colonist "Jet" is doing the job "PlayRockemSockem"
+    Then "Jet" has job "PlayRockemSockem"
     When I wait 900 ticks
     Then Nelim's Pickle Tools: "Jet"'s skill "Melee" experience is higher than remembered
     And Nelim's Pickle Tools: "Jet"'s joy tolerance for the kind "Gaming_Dexterity" is higher than remembered
@@ -75,7 +78,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     When Nelim's Pickle Tools: I remember "Jet"'s skill "Intellectual" experience
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Cerebral"
     And Nelim's Pickle Tools: the joy giver "PlayDNRandies" job is forced on "Jet"
-    Then Nelim's Pickle Tools: the colonist "Jet" is doing the job "PlayDNRandies"
+    Then "Jet" has job "PlayDNRandies"
     When I wait 900 ticks
     Then Nelim's Pickle Tools: "Jet"'s skill "Intellectual" experience is higher than remembered
     And Nelim's Pickle Tools: "Jet"'s joy tolerance for the kind "Gaming_Cerebral" is higher than remembered
