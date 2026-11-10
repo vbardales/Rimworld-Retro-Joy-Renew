@@ -64,15 +64,15 @@ Feature: Retro Joy Renew recreation behaves as the description promises
   Scenario: colonists play Rock'em Sock'em and train melee
     Given Nelim's Pickle Tools: I place the decor "RockemSockemTable" owned by the colonists at (72, 88)
     And Nelim's Pickle Tools: I place the decor "DiningChair" on a cardinal cell next to the nearest "RockemSockemTable"
-    And Nelim's Pickle Tools: the schedule of "Larson" is joy all day
-    And Nelim's Pickle Tools: "Larson" stands at (70, 86)
-    When Nelim's Pickle Tools: I remember "Larson"'s skill "Melee" experience
-    And Nelim's Pickle Tools: I remember "Larson"'s joy tolerance for the kind "Gaming_Dexterity"
-    And Nelim's Pickle Tools: the joy giver "PlayRockemSockem" job is forced on "Larson"
-    Then "Larson" has job "PlayRockemSockem"
+    And Nelim's Pickle Tools: the schedule of "Morrison" is joy all day
+    And Nelim's Pickle Tools: "Morrison" stands at (70, 86)
+    When Nelim's Pickle Tools: I remember "Morrison"'s skill "Melee" experience
+    And Nelim's Pickle Tools: I remember "Morrison"'s joy tolerance for the kind "Gaming_Dexterity"
+    And Nelim's Pickle Tools: the joy giver "PlayRockemSockem" job is forced on "Morrison"
+    Then "Morrison" has job "PlayRockemSockem"
     When I wait 900 ticks
-    Then Nelim's Pickle Tools: "Larson"'s skill "Melee" experience is higher than remembered
-    And Nelim's Pickle Tools: "Larson"'s joy tolerance for the kind "Gaming_Dexterity" is higher than remembered
+    Then Nelim's Pickle Tools: "Morrison"'s skill "Melee" experience is higher than remembered
+    And Nelim's Pickle Tools: "Morrison"'s joy tolerance for the kind "Gaming_Dexterity" is higher than remembered
     And no errors were logged
 
   @timeout:300
