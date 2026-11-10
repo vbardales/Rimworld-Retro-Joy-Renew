@@ -5,7 +5,7 @@
 # run in both languages; the console label itself is not asserted because the two languages differ.
 # Every scenario builds its own 5 by 5 room at (70, 85) on a freshly loaded test-colony; Jet is a colonist of that save.
 # Written 2026-11-10 on steps compiled and not yet played: a red scenario may be a step to fix, read the failure before the mod.
-@requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.deffields
+@requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.deffields @requires:nelim.pickletools.screenshotstudio
 Feature: Retro Joy Renew recreation behaves as the description promises
 
   Background:
@@ -21,7 +21,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @timeout:300
   Scenario: a colonist plays on the console like on a television
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists exactly at (72, 88)
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Video"
@@ -34,15 +34,15 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @review @timeout:300
   Scenario: a colonist in the next room cannot use the console through the wall
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists exactly at (72, 88)
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
     And Nelim's Pickle Tools: "Jet" stands at (66, 88)
     When Nelim's Pickle Tools: the reasons why "Jet" cannot take "RimtendoESConsole" at (72, 88) for joy are logged
     Then no errors were logged
 
   @timeout:300
   Scenario: a downed colonist plays on the console from bed
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists exactly at (72, 88)
-    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists exactly at (73, 86)
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 88)
+    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (73, 86)
     And Nelim's Pickle Tools: "Jet" is downed in the bed at (73, 86)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
@@ -54,7 +54,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @timeout:300
   Scenario: colonists play Rock'em Sock'em and train melee
-    Given Nelim's Pickle Tools: I place the decor "RockemSockemTable" owned by the colonists exactly at (72, 88)
+    Given Nelim's Pickle Tools: I place the decor "RockemSockemTable" owned by the colonists at (72, 88)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s skill "Melee" experience
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Dexterity"
@@ -67,7 +67,7 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @timeout:300
   Scenario: colonists play Dungeons and Randies and train intellectual
-    Given Nelim's Pickle Tools: I place the decor "DNRandiesTable" owned by the colonists exactly at (72, 87)
+    Given Nelim's Pickle Tools: I place the decor "DNRandiesTable" owned by the colonists at (72, 87)
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     When Nelim's Pickle Tools: I remember "Jet"'s skill "Intellectual" experience
     And Nelim's Pickle Tools: I remember "Jet"'s joy tolerance for the kind "Gaming_Cerebral"
@@ -90,11 +90,11 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @review @requires:nelim.pickletools.camerazoom @timeout:300
   Scenario: the recreation furniture is visible in a loaded colony
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists exactly at (70, 87)
-    And Nelim's Pickle Tools: I place the decor "RockemSockemTable" owned by the colonists exactly at (72, 89)
-    And Nelim's Pickle Tools: I place the decor "DNRandiesTable" owned by the colonists exactly at (74, 87)
-    And Nelim's Pickle Tools: I place the decor "RetroArmchair" owned by the colonists exactly at (71, 85)
-    And Nelim's Pickle Tools: I place the decor "RetroSmallTable" owned by the colonists exactly at (73, 85)
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" exactly at (70, 87)
+    And Nelim's Pickle Tools: I place the decor "RockemSockemTable" exactly at (72, 89)
+    And Nelim's Pickle Tools: I place the decor "DNRandiesTable" exactly at (74, 87)
+    And Nelim's Pickle Tools: I place the decor "RetroArmchair" exactly at (71, 85)
+    And Nelim's Pickle Tools: I place the decor "RetroSmallTable" exactly at (73, 85)
     When Nelim's Pickle Tools: I frame the cells (69, 84) to (75, 90) filling 85 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "recreation furniture in a colony"
