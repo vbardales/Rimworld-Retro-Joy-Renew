@@ -18,13 +18,14 @@ workshop: 3811391689           # Mod/About/PublishedFileId.txt (untracked)
 published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-11-02)
 tested_on: 2026-11-06 pickle 323b25d
 remaining:
+  - "2026-11-10: CI dry-run publish-tag.yml run 42886403096 on f4ca814 (ref main, version 1.0.0, mode dry-run): FAILED in changenote.mjs, Error: no \"### 1.0.0\" section found. PUBLICATION.md has no change note section for 1.0.0: owner text to write, then rerun the dry-run. No Steam contact, no secret"
   - "2026-11-10: verified: initial Pickle suite green EN and FR (2/2 each, exitReason passed, run 2026-11-06 on 1.6.4871), loading, no ERROR from this mod in Player.log; evidence minified in Tests/Pickle/Evidence/initial-en and initial-fr. Still unverified: English/French display, recreation behaviour, log output beyond load, save compatibility. The @review scenario only asserts 'no errors were logged' and takes no capture: nothing to review visually"
   - "2026-11-10: playTests state: Tests/Pickle/Mod/Pickle/Features/02-recreation.feature scripted (9 scenarios) with the PickleTools bundle-only map. Green one by one in English: console research (ticket 4136), television and Dungeons and Randies XP (1148), Rock'em Melee (2d23), furniture tab and Rock'em label (71cd), capture read and kept (8.d, Evidence/capture-furniture). Whole suite in English filed as ticket 20261110-192301-822-7df3 on 8f3f93f: read summary.json and junit.xml at RUN_DONE; the downed-from-bed and wall scenarios are the first play of NPT in-bed giver and no-job steps. Then: whole suite in French, 8.i (EN/FR display, the console label is not asserted because languages differ), 8.k, 8.m code review (Opus once), tested_on to refresh"
   - "2026-11-10: Check-Status WARN rimworld-version (About.xml description names 1.6, touches Mod/). Test-shape conversion done: Rule-OwnValues.ps1 validated by Audit, Test-Mod.ps1 and .github generated, 6 passed. PublishedFileId.txt untracked: commit before publication"
   - "2026-11-10: scenario 7 (opportunistic haul) covered offline by Rule-OwnValues.ps1, in game n/a (engine behaviour of the flag); scenario 3 wall case asserts the negative giver step"
   - "2026-11-03: unverified: 8.m code review (Opus sub-agent, once after the tests), 8.l evidence and tested_on"
   - "2026-11-03: decision owner: CHANGELOG.md heading [1.0.0] 2026-09-05 First release vs hidden 0.1.0; About.xml description names 1.6 (Check-Status WARN, touches Mod/)"
-protocols_read_sha: f81cf305355133d1ed901443c9f282d4670c7688
+protocols_read_sha: 37653405fdfcbcb133967cfb5b343fcbab9fc749
 updated: 2026-11-10    # initial Pickle runs read and sorted, protocols re-read
 ---
 
