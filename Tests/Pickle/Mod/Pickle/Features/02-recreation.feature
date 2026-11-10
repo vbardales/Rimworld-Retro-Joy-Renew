@@ -98,7 +98,8 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     And Nelim's Pickle Tools: I place the decor "DNRandiesTable" exactly at (74, 87)
     And Nelim's Pickle Tools: I place the decor "RetroArmchair" exactly at (71, 85)
     And Nelim's Pickle Tools: I place the decor "RetroSmallTable" exactly at (73, 85)
-    When Nelim's Pickle Tools: I frame the cells (60, 76) to (80, 96) filling 85 percent of the screen
+    When Nelim's Pickle Tools: I frame the cells (69, 84) to (75, 90) filling 85 percent of the screen
+    And Nelim's Pickle Tools: the framed cells fill at least 80 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "recreation furniture in a colony"
     And no errors were logged
