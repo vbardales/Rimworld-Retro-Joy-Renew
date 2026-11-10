@@ -3,8 +3,6 @@
 nelim.pickletools.stagedecor   path:PickleTools/StageDecor/Mod
 nelim.pickletools.deffields    path:PickleTools/DefFieldSteps/Mod
 nelim.pickletools.camerazoom   path:PickleTools/CameraZoom/Mod
-nelim.pickletools              path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+nelim.pickletools              path:PickleTools/Mod
 nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
 ray1203.SimpleCameraSetting    3232415388
-nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
-nelim.pickletools.research     path:PickleTools/ResearchSteps/Mod

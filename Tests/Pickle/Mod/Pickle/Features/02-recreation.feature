@@ -5,7 +5,7 @@
 # run in both languages; the console label itself is not asserted because the two languages differ.
 # Every scenario builds its own 5 by 5 room at (70, 85) on a freshly loaded test-colony; Jet is a colonist of that save.
 # Written 2026-11-10 on steps compiled and not yet played: a red scenario may be a step to fix, read the failure before the mod.
-@requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.research @requires:nelim.pickletools.deffields @requires:nelim.pickletools.screenshotstudio
+@requires:nelim.pickletools.stagedecor @requires:nelim.pickletools @requires:nelim.pickletools.deffields @requires:nelim.pickletools.screenshotstudio
 Feature: Retro Joy Renew recreation behaves as the description promises
 
   Background:
@@ -38,13 +38,13 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     And Nelim's Pickle Tools: "Jet"'s joy tolerance for the kind "Gaming_Video" is higher than remembered
     And no errors were logged
 
-  @review @timeout:300
+  @timeout:300
   Scenario: a colonist in the next room cannot use the console through the wall
     Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 87)
     And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 87) is powered
     And Nelim's Pickle Tools: "Jet" stands at (77, 88)
-    When Nelim's Pickle Tools: the reasons why "Jet" cannot take "RimtendoESConsole" at (72, 87) for joy are logged
-    Then no errors were logged
+    Then Nelim's Pickle Tools: the joy giver "PlayRimtendoES" gives no job to "Jet"
+    And no errors were logged
 
   @timeout:300
   Scenario: a downed colonist plays on the console from bed
