@@ -1,0 +1,13 @@
+{
+  "templateStamp": "ed4669c0a5bf",
+  "workshopId": "3811391689",
+  "packageId": "nelim.retrojoy",
+  "releaseTitle": "Retro Joy Renew {version}",
+  "requirePaths": [
+    "Defs",
+    "Languages"
+  ],
+  "forbidPaths": [],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery"
+}
