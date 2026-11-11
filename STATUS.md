@@ -18,6 +18,7 @@ workshop: 3811391689           # Mod/About/PublishedFileId.txt (untracked)
 published: hidden              # 0.1.0, Workshop visibility hidden (owner, 2026-11-02)
 tested_on: 2026-11-06 pickle 323b25d
 remaining:
+  - "2026-11-11: ticket 20261111-175952-068-9069 (NPT 6630f9e) FAILED 0/2: Ambiguous step DecorSteps.BuildingPowered (StageDecor) vs WorldProbeSteps.Powered (ColonistRace) on \"the building ... is powered\". Asked NPT (PiT session) to disambiguate; report read and deleted from Inbox. Next: refile downed + control TV scenario on the new NPT sha"
   - "2026-11-11: downed scenario (02-recreation.feature, scenario 4): setup bugs found one by one with NPT diagnostics: step order (schedule before lay down), bed on a watch cell (72, 89), console and TV facing north, and the BED rotation gate of CanWatchFromBed (bed facing North fails when the building is south of the pawn): bed now facing west. Ticket 20261111-175952-068-9069 filed (downed + control TV scenario, NPT 6630f9e), result pending: read summary.json and junit.xml at RUN_DONE; if green, delete the control scenario or keep it (owner of the test: me), commit, then whole suite EN then FR. Inbox triaged, empty. CI dry-run green (run 42887356749 on 490714a)"
   - "2026-11-10: CI dry-run run 42887356749 on 490714a (ref = that SHA, 1.0.0): GREEN. Change note read from PUBLICATION.md, upload path and workshop.vdf checked, nothing sent to Steam. Gallery folder Art/Gallery not in the commit (gallery not made yet, expected); public page not readable (hidden item), comparisons skipped"
   - "2026-11-10: CI dry-run run 42887147624 on 7ff4216 (ref = that SHA, 1.0.0): change note OK, then FAILED ENOENT Mod/About/PublishedFileId.txt (untracked, not in the pinned commit). Commit it, push, rerun the dry-run on the new SHA (needs a new owner go)"
@@ -28,7 +29,7 @@ remaining:
   - "2026-11-10: scenario 7 (opportunistic haul) covered offline by Rule-OwnValues.ps1, in game n/a (engine behaviour of the flag); scenario 3 wall case asserts the negative giver step"
   - "2026-11-03: unverified: 8.m code review (Opus sub-agent, once after the tests), 8.l evidence and tested_on"
   - "2026-11-03: decision owner: CHANGELOG.md heading [1.0.0] 2026-09-05 First release vs hidden 0.1.0; About.xml description names 1.6 (Check-Status WARN, touches Mod/)"
-protocols_read_sha: 37653405fdfcbcb133967cfb5b343fcbab9fc749
+protocols_read_sha: 7692726a64c9f7bef765e2952510d99117e468bc
 updated: 2026-11-10    # initial Pickle runs read and sorted, protocols re-read
 ---
 
