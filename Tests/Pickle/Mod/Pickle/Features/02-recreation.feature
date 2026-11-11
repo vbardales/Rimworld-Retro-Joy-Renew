@@ -48,9 +48,9 @@ Feature: Retro Joy Renew recreation behaves as the description promises
 
   @timeout:300
   Scenario: a downed colonist plays on the console from bed
-    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 87)
+    Given Nelim's Pickle Tools: I place the decor "RimtendoESConsole" owned by the colonists at (72, 87) facing north
     And Nelim's Pickle Tools: the building "RimtendoESConsole" at (72, 87) is powered
-    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (72, 89)
+    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (72, 89) facing west
     And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
     And Nelim's Pickle Tools: "Jet" is downed in the bed at (72, 89)
     When Nelim's Pickle Tools: I remember "Jet"'s joy level
@@ -59,6 +59,15 @@ Feature: Retro Joy Renew recreation behaves as the description promises
     When I wait 600 ticks
     Then Nelim's Pickle Tools: "Jet"'s joy level is higher than remembered
     And no errors were logged
+
+  @timeout:300
+  Scenario: control downed colonist watches a vanilla television from bed
+    Given Nelim's Pickle Tools: I place the decor "TubeTelevision" owned by the colonists at (72, 87) facing north
+    And Nelim's Pickle Tools: the building "TubeTelevision" at (72, 87) is powered
+    And Nelim's Pickle Tools: I place the decor "Bed" owned by the colonists at (72, 89) facing west
+    And Nelim's Pickle Tools: the schedule of "Jet" is joy all day
+    And Nelim's Pickle Tools: "Jet" is downed in the bed at (72, 89)
+    Then Nelim's Pickle Tools: the joy giver "WatchTelevision" job is forced on "Jet"
 
   @timeout:300
   Scenario: colonists play Rock'em Sock'em and train melee
