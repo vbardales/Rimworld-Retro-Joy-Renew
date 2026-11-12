@@ -30,7 +30,7 @@ remaining:
   - "2026-11-10: scenario 7 (opportunistic haul) covered offline by Rule-OwnValues.ps1, in game n/a (engine behaviour of the flag); scenario 3 wall case asserts the negative giver step"
   - "2026-11-03: unverified: 8.m code review (Opus sub-agent, once after the tests), 8.l evidence and tested_on"
   - "2026-11-03: decision owner: CHANGELOG.md heading [1.0.0] 2026-09-05 First release vs hidden 0.1.0; About.xml description names 1.6 (Check-Status WARN, touches Mod/)"
-protocols_read_sha: 7692726a64c9f7bef765e2952510d99117e468bc
+protocols_read_sha: 9481d090854f082b638e84ad647a202fec7de6d2
 updated: 2026-11-10    # initial Pickle runs read and sorted, protocols re-read
 ---
 
