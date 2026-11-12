@@ -37,3 +37,8 @@ desktop.ini
 
 # Preview renderer QA output (local).
 Art/.render/
+
+# Pickle reports: disk only (docs/TEST-EVIDENCE.md)
+Tests/Pickle/Evidence/
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/
